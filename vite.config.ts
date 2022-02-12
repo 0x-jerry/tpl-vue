@@ -8,7 +8,6 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
-import Layouts from 'vite-plugin-vue-layouts'
 
 import OptimizationPersist from 'vite-plugin-optimize-persist'
 import PkgConfig from 'vite-plugin-package-config'
@@ -37,11 +36,6 @@ export default defineConfig(({ mode }) => ({
 
     // https://github.com/hannoeru/vite-plugin-pages
     Pages({
-      exclude: ['**/components/*.vue', '**/*.ts'],
-    }),
-
-    // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
-    Layouts({
       exclude: ['**/components/*.vue', '**/*.ts'],
     }),
 

@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@0x-jerry/utils': ^0.4.1
   '@types/node': ^17.0.17
   '@vitejs/plugin-vue': ^2.2.0
   '@vueuse/core': ^7.6.1
@@ -19,6 +20,7 @@ specifiers:
   windicss: ^3.4.3
 
 dependencies:
+  '@0x-jerry/utils': registry.npmmirror.com/@0x-jerry/utils/0.4.1
   '@vueuse/core': registry.npmmirror.com/@vueuse/core/7.6.1_vue@3.2.31
   vue: registry.npmmirror.com/vue/3.2.31
   vue-router: registry.npmmirror.com/vue-router/4.0.12_vue@3.2.31
@@ -53,6 +55,12 @@ packages:
       '@nodelib/fs.stat': registry.npmmirror.com/@nodelib/fs.stat/2.0.5
       run-parallel: registry.npmmirror.com/run-parallel/1.2.0
     dev: true
+
+  registry.npmmirror.com/@0x-jerry/utils/0.4.1:
+    resolution: {integrity: sha512-V1DzLGuZnVPoDOTRkcdzPToCCMmw1yPJg+/VtXg9qC0cc+fpQO7WN2/gObGiLiXqoUcqhgjCY1gvM4Yb8YYFKw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@0x-jerry/utils/-/utils-0.4.1.tgz}
+    name: '@0x-jerry/utils'
+    version: 0.4.1
+    dev: false
 
   registry.npmmirror.com/@antfu/install-pkg/0.1.0:
     resolution: {integrity: sha512-VaIJd3d1o7irZfK1U0nvBsHMyjkuyMP3HKYVV53z8DKyulkHKmjhhtccXO51WSPeeSHIeoJEoNOKavYpS7jkZw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@antfu/install-pkg/-/install-pkg-0.1.0.tgz}
