@@ -22,7 +22,6 @@
     "vite-plugin-optimize-persist": "^0.1.2",
     "vite-plugin-package-config": "^0.1.1",
     "vite-plugin-pages": "^0.20.2",
-    "vite-plugin-vue-layouts": "^0.6.0",
     "vite-plugin-windicss": "^1.7.0",
     "windicss": "^3.4.3"
   },
