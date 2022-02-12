@@ -5,6 +5,8 @@ import path from 'path'
 import Pages from 'vite-plugin-pages'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import Layouts from 'vite-plugin-vue-layouts'
 
@@ -24,10 +26,13 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     Vue(),
 
+    // https://github.com/antfu/unplugin-icons
+    Icons(),
+
     // https://github.com/antfu/vite-plugin-components
     Components({
-      dts: true,
-      resolvers: [ElementPlusResolver()],
+      dts: 'src/auto-components.d.ts',
+      resolvers: [ElementPlusResolver(), IconsResolver()],
     }),
 
     // https://github.com/hannoeru/vite-plugin-pages
@@ -42,6 +47,7 @@ export default defineConfig(({ mode }) => ({
 
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
+      dts: 'src/auto-imports.d.ts',
       imports: ['vue', 'vue-router', '@vueuse/core'],
       resolvers: [globalResolver],
     }),
