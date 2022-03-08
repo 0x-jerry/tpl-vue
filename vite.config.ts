@@ -11,7 +11,6 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 import OptimizationPersist from 'vite-plugin-optimize-persist'
 import PkgConfig from 'vite-plugin-package-config'
-import { visualizer } from 'rollup-plugin-visualizer'
 import { globalResolver } from './vite/globalVars'
 
 // https://vitejs.dev/config/
@@ -56,19 +55,5 @@ export default defineConfig(({ mode }) => ({
     // https://github.com/antfu/vite-plugin-optimize-persist
     PkgConfig(),
     OptimizationPersist(),
-
-    ...extraPlugin(mode),
   ],
 }))
-
-function extraPlugin(mode: string) {
-  switch (mode) {
-    case 'analyze':
-      return [visualizer({ open: true })]
-
-    default:
-      break
-  }
-
-  return []
-}

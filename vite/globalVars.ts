@@ -1,4 +1,4 @@
-import { Resolver } from 'unplugin-auto-import/dist/types'
+import { Resolver } from 'unplugin-auto-import/types'
 
 /**
  * 自动引入的变量
