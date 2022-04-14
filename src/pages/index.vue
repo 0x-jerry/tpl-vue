@@ -1,3 +1,5 @@
 <template>
-  <div>Hello world</div>
+  <div>
+    <k-button>Hello World!</k-button>
+  </div>
 </template>
