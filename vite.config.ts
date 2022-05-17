@@ -7,8 +7,8 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import Unocss from 'unocss/vite'
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import { presetUno, presetAttributify, transformerDirectives } from 'unocss'
+import { VueKitResolver } from '@0x-jerry/vue-kit/resolver'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -27,7 +27,7 @@ export default defineConfig(({ mode }) => ({
     // https://github.com/antfu/vite-plugin-components
     Components({
       dts: 'src/auto-components.d.ts',
-      resolvers: [ElementPlusResolver(), IconsResolver()],
+      resolvers: [VueKitResolver(), IconsResolver()],
     }),
 
     // https://github.com/hannoeru/vite-plugin-pages

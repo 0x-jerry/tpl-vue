@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "@0x-jerry/utils": "^1.8.0",
+    "@0x-jerry/vue-kit": "^1.5.2",
     "@vueuse/core": "^8.5.0",
     "normalize.css": "^8.0.1",
     "vue": "^3.2.33",
