@@ -1,7 +1,9 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
-import 'virtual:windi.css'
+import 'normalize.css'
+import './styles/global.less'
+import 'uno.css'
 
 const app = createApp(App)
 
