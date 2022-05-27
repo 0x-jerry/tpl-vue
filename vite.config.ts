@@ -9,14 +9,18 @@ import IconsResolver from 'unplugin-icons/resolver'
 import Unocss from 'unocss/vite'
 import { presetUno, presetAttributify, transformerDirectives } from 'unocss'
 import { VueKitResolver } from '@0x-jerry/vue-kit/resolver'
+import mkcert from 'vite-plugin-mkcert'
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig(() => ({
   base: './',
   resolve: {
     alias: {
       '@/': `${path.resolve(__dirname, 'src')}/`,
     },
+  },
+  server: {
+    https: true,
   },
   plugins: [
     Vue(),
@@ -45,6 +49,11 @@ export default defineConfig(({ mode }) => ({
     Unocss({
       presets: [presetAttributify(), presetUno()],
       transformers: [transformerDirectives()],
+    }),
+
+    // https://github.com/liuweiGL/vite-plugin-mkcert
+    mkcert({
+      source: 'coding',
     }),
   ],
 }))
