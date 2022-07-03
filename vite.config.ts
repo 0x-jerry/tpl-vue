@@ -7,7 +7,6 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import Unocss from 'unocss/vite'
-import { presetUno, presetAttributify, transformerDirectives } from 'unocss'
 import { VueKitResolver } from '@0x-jerry/vue-kit/resolver'
 import mkcert from 'vite-plugin-mkcert'
 
@@ -46,10 +45,7 @@ export default defineConfig(() => ({
     }),
 
     // https://github.com/unocss/unocss
-    Unocss({
-      presets: [presetAttributify(), presetUno()],
-      transformers: [transformerDirectives()],
-    }),
+    Unocss(),
 
     // https://github.com/liuweiGL/vite-plugin-mkcert
     mkcert({
