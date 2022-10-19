@@ -23,6 +23,7 @@
     "unplugin-vue-components": "^0.21.1",
     "vite": "^3.0.0",
     "vite-plugin-mkcert": "1.8.1",
-    "vite-plugin-pages": "^0.25.0"
+    "vite-plugin-pages": "^0.25.0",
+    "vitest": "^0.24.3"
   }
 }

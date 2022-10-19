@@ -1,3 +1,4 @@
+/// <reference types="vitest/config" />
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import path from 'path'
@@ -11,45 +12,53 @@ import { VueKitResolver } from '@0x-jerry/vue-kit/resolver'
 import mkcert from 'vite-plugin-mkcert'
 
 // https://vitejs.dev/config/
-export default defineConfig(() => ({
-  base: './',
-  resolve: {
-    alias: {
-      '@/': `${path.resolve(__dirname, 'src')}/`,
+export default defineConfig(({ mode }) => {
+  const isDev = mode === 'development'
+
+  return {
+    base: './',
+    resolve: {
+      alias: {
+        '@/': `${path.resolve(__dirname, 'src')}/`,
+      },
     },
-  },
-  server: {
-    https: true,
-  },
-  plugins: [
-    Vue(),
+    server: {
+      https: isDev,
+    },
+    plugins: [
+      Vue(),
 
-    // https://github.com/antfu/unplugin-icons
-    Icons(),
+      // https://github.com/antfu/unplugin-icons
+      Icons(),
 
-    // https://github.com/antfu/vite-plugin-components
-    Components({
-      dts: 'src/auto-components.d.ts',
-      resolvers: [VueKitResolver(), IconsResolver()],
-    }),
+      // https://github.com/antfu/vite-plugin-components
+      Components({
+        dts: 'src/auto-components.d.ts',
+        resolvers: [VueKitResolver(), IconsResolver()],
+      }),
 
-    // https://github.com/hannoeru/vite-plugin-pages
-    Pages({
-      exclude: ['**/components/*.vue', '**/*.ts'],
-    }),
+      // https://github.com/hannoeru/vite-plugin-pages
+      Pages({
+        exclude: ['**/components/*.vue', '**/*.ts'],
+      }),
 
-    // https://github.com/antfu/unplugin-auto-import
-    AutoImport({
-      dts: 'src/auto-imports.d.ts',
-      imports: ['vue', 'vue-router', '@vueuse/core'],
-    }),
+      // https://github.com/antfu/unplugin-auto-import
+      AutoImport({
+        dts: 'src/auto-imports.d.ts',
+        imports: ['vue', 'vue-router', '@vueuse/core'],
+      }),
 
-    // https://github.com/unocss/unocss
-    Unocss(),
+      // https://github.com/unocss/unocss
+      Unocss(),
 
-    // https://github.com/liuweiGL/vite-plugin-mkcert
-    mkcert({
-      source: 'coding',
-    }),
-  ],
-}))
+      // https://github.com/liuweiGL/vite-plugin-mkcert
+      isDev &&
+        mkcert({
+          source: 'coding',
+        }),
+    ],
+    test: {
+      globals: true,
+    },
+  }
+})
