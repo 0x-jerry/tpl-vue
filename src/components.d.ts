@@ -7,6 +7,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    KButton: typeof import('@0x-jerry/vue-kit')['KButton']
     KInput: typeof import('@0x-jerry/vue-kit')['KInput']
   }
 }
