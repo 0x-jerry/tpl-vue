@@ -27,8 +27,9 @@ export default defineConfig(({}) => {
 
       // https://github.com/antfu/vite-plugin-components
       Components({
-        dts: 'src/auto-components.d.ts',
+        dts: 'src/components.d.ts',
         resolvers: [VueKitResolver(), IconsResolver()],
+        types: [],
       }),
 
       // https://github.com/hannoeru/vite-plugin-pages

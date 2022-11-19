@@ -14,7 +14,12 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "types": ["vitest/globals"]
+    "types": [
+      "vitest/globals",
+      "vite/client",
+      "vite-plugin-pages/client",
+      "unplugin-icons/types/vue"
+    ]
   },
   "include": ["src"]
 }
