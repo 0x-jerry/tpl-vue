@@ -9,8 +9,8 @@ jobs:
   deploy:
     strategy:
       matrix:
-        os: ['ubuntu-20.04']
-        node: [16]
+        os: ['ubuntu-latest']
+        node: [18]
 
     runs-on: ${{ matrix.os }}
     steps:
@@ -23,14 +23,23 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
-      - name: Cache .pnpm-store
-        uses: actions/cache@v3
-        with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-node${{ matrix.node }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        id: pnpm-install
 
-      - name: Install pnpm
-        run: curl -f https://get.pnpm.io/v6.14.js | node - add --global pnpm
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
       - run: pnpm i
       - run: pnpm run setup
