@@ -1,9 +1,7 @@
 {
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview",
-    "setup": "cd kit && npm run build"
+    "build": "vite build"
   },
   "dependencies": {
     "@0x-jerry/utils": "^1.18.0",
