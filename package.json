@@ -16,7 +16,7 @@
     "@vitejs/plugin-vue": "^4.3.3",
     "less": "^4.2.0",
     "typescript": "^5.2.2",
-    "unocss": "0.57.7",
+    "unocss": "0.58.0",
     "unplugin-auto-import": "^0.17.0",
     "unplugin-icons": "^0.17.0",
     "unplugin-vue-components": "^0.25.1",
