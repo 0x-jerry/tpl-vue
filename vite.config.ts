@@ -8,6 +8,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import Unocss from 'unocss/vite'
+import { VueRouterAutoImports } from 'unplugin-vue-router'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ }) => {
@@ -41,7 +42,7 @@ export default defineConfig(({ }) => {
       // https://github.com/antfu/unplugin-auto-import
       AutoImport({
         dts: 'types/auto-imports.d.ts',
-        imports: ['vue', 'vue-router', '@vueuse/core'],
+        imports: ['vue', '@vueuse/core', VueRouterAutoImports],
       }),
 
       // https://github.com/unocss/unocss

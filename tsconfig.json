@@ -10,16 +10,23 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "lib": ["esnext", "dom"],
+    "lib": [
+      "esnext",
+      "dom"
+    ],
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": [
+        "src/*"
+      ]
     },
     "types": [
       "vitest/globals",
       "vite/client",
-      "vite-plugin-pages/client",
       "unplugin-icons/types/vue"
     ]
   },
-  "include": ["src"]
+  "include": [
+    "src",
+    "types"
+  ]
 }
