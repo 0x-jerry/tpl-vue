@@ -14,7 +14,7 @@
   "devDependencies": {
     "@iconify/json": "^2.2.153",
     "@types/node": "^20.10.3",
-    "@vitejs/plugin-vue": "^4.5.1",
+    "@vitejs/plugin-vue": "^5.0.0",
     "less": "^4.2.0",
     "typescript": "^5.3.3",
     "unocss": "0.58.5",
