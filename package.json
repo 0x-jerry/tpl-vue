@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "@0x-jerry/utils": "^2.2.7",
-    "@vueuse/core": "^10.10.0",
+    "@vueuse/core": "^11.0.0",
     "normalize.css": "^8.0.1",
     "vue": "^3.4.27",
     "vue-router": "^4.3.2"
