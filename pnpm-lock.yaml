@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@0x-jerry/utils':
-    specifier: ^2.2.7
-    version: 2.2.7
+    specifier: ^3.0.0
+    version: 3.0.0
   '@vueuse/core':
     specifier: ^11.0.0
     version: 11.0.0(vue@3.4.27)
@@ -55,8 +55,8 @@ devDependencies:
 
 packages:
 
-  /@0x-jerry/utils@2.2.7:
-    resolution: {integrity: sha512-+qb/blJNlEdB1ce/0AJyG+YvZUyjScDnkQVIAJykXzVWrWxB4mdFFz2nA6OHqPySquUgrbtRc/DwAzAGw1Ii/Q==}
+  /@0x-jerry/utils@3.0.0:
+    resolution: {integrity: sha512-a0b38xFszEj2+O2wv96LWl2MyRLmApOzIb8NxZRFWtC0SWXzQcfkXxNs06RfMo5MAxFXyxSQWUtw0tLIdnobiw==}
     dependencies:
       fflate: 0.8.2
       nanoid: 5.0.7
