@@ -23,8 +23,8 @@ dependencies:
 
 devDependencies:
   '@types/node':
-    specifier: ^20.12.12
-    version: 20.12.12
+    specifier: ^22.0.0
+    version: 22.8.2
   '@vitejs/plugin-vue':
     specifier: ^5.0.4
     version: 5.0.4(vite@5.2.11)(vue@3.4.27)
@@ -36,7 +36,7 @@ devDependencies:
     version: 5.4.5
   unocss:
     specifier: 0.62.4
-    version: 0.62.4(postcss@8.4.38)(vite@5.2.11)
+    version: 0.62.4(postcss@8.4.47)(vite@5.2.11)
   unplugin-auto-import:
     specifier: ^0.18.0
     version: 0.18.3(@vueuse/core@11.0.0)
@@ -48,10 +48,10 @@ devDependencies:
     version: 0.10.8(vue-router@4.3.2)(vue@3.4.27)
   vite:
     specifier: ^5.2.11
-    version: 5.2.11(@types/node@20.12.12)(less@4.2.0)
+    version: 5.2.11(@types/node@22.8.2)(less@4.2.0)
   vitest:
     specifier: ^2.0.0
-    version: 2.0.1(@types/node@20.12.12)(less@4.2.0)
+    version: 2.0.1(@types/node@22.8.2)(less@4.2.0)
 
 packages:
 
@@ -801,10 +801,10 @@ packages:
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
     dev: true
 
-  /@types/node@20.12.12:
-    resolution: {integrity: sha512-eWLDGF/FOSPtAvEqeRAQ4C8LSA7M1I7i0ky1I8U7kD1J5ITyW3AsRhQrKVoWf5pFKZ2kILsEGJhsI9r93PYnOw==}
+  /@types/node@22.8.2:
+    resolution: {integrity: sha512-NzaRNFV+FZkvK/KLCsNdTvID0SThyrs5SHB6tsD/lajr22FGC73N2QeDPM2wHtVde8mgcXuSsHQkH5cX1pbPLw==}
     dependencies:
-      undici-types: 5.26.5
+      undici-types: 6.19.8
     dev: true
 
   /@types/web-bluetooth@0.0.20:
@@ -821,7 +821,7 @@ packages:
       '@unocss/core': 0.62.4
       '@unocss/reset': 0.62.4
       '@unocss/vite': 0.62.4(vite@5.2.11)
-      vite: 5.2.11(@types/node@20.12.12)(less@4.2.0)
+      vite: 5.2.11(@types/node@22.8.2)(less@4.2.0)
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -879,7 +879,7 @@ packages:
       sirv: 2.0.4
     dev: true
 
-  /@unocss/postcss@0.62.4(postcss@8.4.38):
+  /@unocss/postcss@0.62.4(postcss@8.4.47):
     resolution: {integrity: sha512-kWdHy7UsSP4bDu8I7sCKeO0VuzvVpNHmn2rifK5gNstUx5dZ1H/SoyXTHx5sKtgfZBRzdNXFu2nZ3PzYGvEFbw==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -889,7 +889,7 @@ packages:
       '@unocss/core': 0.62.4
       '@unocss/rule-utils': 0.62.4
       css-tree: 2.3.1
-      postcss: 8.4.38
+      postcss: 8.4.47
       tinyglobby: 0.2.6
     transitivePeerDependencies:
       - supports-color
@@ -1007,7 +1007,7 @@ packages:
       chokidar: 3.6.0
       magic-string: 0.30.11
       tinyglobby: 0.2.6
-      vite: 5.2.11(@types/node@20.12.12)(less@4.2.0)
+      vite: 5.2.11(@types/node@22.8.2)(less@4.2.0)
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -1020,7 +1020,7 @@ packages:
       vite: ^5.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 5.2.11(@types/node@20.12.12)(less@4.2.0)
+      vite: 5.2.11(@types/node@22.8.2)(less@4.2.0)
       vue: 3.4.27(typescript@5.4.5)
     dev: true
 
@@ -1838,15 +1838,6 @@ packages:
       brace-expansion: 2.0.1
     dev: true
 
-  /mlly@1.7.0:
-    resolution: {integrity: sha512-U9SDaXGEREBYQgfejV97coK0UL1r+qnF2SyO9A3qcI8MzKnsIFKHNVEkrDyNncQTKQQumsasmeq84eNMdBfsNQ==}
-    dependencies:
-      acorn: 8.11.3
-      pathe: 1.1.2
-      pkg-types: 1.1.1
-      ufo: 1.5.3
-    dev: true
-
   /mlly@1.7.1:
     resolution: {integrity: sha512-rrVRZRELyQzrIUAVMHxP97kv+G786pHmOKzuFII8zDYahFBS7qnHh2AlYSl1GAHhaMPCz6/oHjVMcfFYgFYHgA==}
     dependencies:
@@ -2268,8 +2259,8 @@ packages:
       - supports-color
     dev: true
 
-  /undici-types@5.26.5:
-    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+  /undici-types@6.19.8:
+    resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
     dev: true
 
   /unimport@3.12.0:
@@ -2293,7 +2284,7 @@ packages:
       - webpack-sources
     dev: true
 
-  /unocss@0.62.4(postcss@8.4.38)(vite@5.2.11):
+  /unocss@0.62.4(postcss@8.4.47)(vite@5.2.11):
     resolution: {integrity: sha512-SaGbxXQkk8GDPeJpWsBCZ8a23Knu4ixVTt6pvcQWKjOCGTd9XBd+vLZzN2WwdwgBPVwmMmx5wp+/gPHKFNOmIw==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -2308,7 +2299,7 @@ packages:
       '@unocss/astro': 0.62.4(vite@5.2.11)
       '@unocss/cli': 0.62.4
       '@unocss/core': 0.62.4
-      '@unocss/postcss': 0.62.4(postcss@8.4.38)
+      '@unocss/postcss': 0.62.4(postcss@8.4.47)
       '@unocss/preset-attributify': 0.62.4
       '@unocss/preset-icons': 0.62.4
       '@unocss/preset-mini': 0.62.4
@@ -2322,7 +2313,7 @@ packages:
       '@unocss/transformer-directives': 0.62.4
       '@unocss/transformer-variant-group': 0.62.4
       '@unocss/vite': 0.62.4(vite@5.2.11)
-      vite: 5.2.11(@types/node@20.12.12)(less@4.2.0)
+      vite: 5.2.11(@types/node@22.8.2)(less@4.2.0)
     transitivePeerDependencies:
       - postcss
       - rollup
@@ -2436,7 +2427,7 @@ packages:
       webpack-virtual-modules: 0.6.2
     dev: true
 
-  /vite-node@2.0.1(@types/node@20.12.12)(less@4.2.0):
+  /vite-node@2.0.1(@types/node@22.8.2)(less@4.2.0):
     resolution: {integrity: sha512-nVd6kyhPAql0s+xIVJzuF+RSRH8ZimNrm6U8ZvTA4MXv8CHI17TFaQwRaFiK75YX6XeFqZD4IoAaAfi9OR1XvQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -2445,7 +2436,7 @@ packages:
       debug: 4.3.5
       pathe: 1.1.2
       picocolors: 1.0.1
-      vite: 5.2.11(@types/node@20.12.12)(less@4.2.0)
+      vite: 5.2.11(@types/node@22.8.2)(less@4.2.0)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -2457,7 +2448,7 @@ packages:
       - terser
     dev: true
 
-  /vite@5.2.11(@types/node@20.12.12)(less@4.2.0):
+  /vite@5.2.11(@types/node@22.8.2)(less@4.2.0):
     resolution: {integrity: sha512-HndV31LWW05i1BLPMUCE1B9E9GFbOu1MbenhS58FuK6owSO5qHm7GiCotrNY1YE5rMeQSFBGmT5ZaLEjFizgiQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -2485,7 +2476,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 20.12.12
+      '@types/node': 22.8.2
       esbuild: 0.20.2
       less: 4.2.0
       postcss: 8.4.38
@@ -2494,7 +2485,7 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /vitest@2.0.1(@types/node@20.12.12)(less@4.2.0):
+  /vitest@2.0.1(@types/node@22.8.2)(less@4.2.0):
     resolution: {integrity: sha512-PBPvNXRJiywtI9NmbnEqHIhcXlk8mB0aKf6REQIaYGY4JtWF1Pg8Am+N0vAuxdg/wUSlxPSVJr8QdjwcVxc2Hg==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -2520,7 +2511,7 @@ packages:
         optional: true
     dependencies:
       '@ampproject/remapping': 2.3.0
-      '@types/node': 20.12.12
+      '@types/node': 22.8.2
       '@vitest/expect': 2.0.1
       '@vitest/runner': 2.0.1
       '@vitest/snapshot': 2.0.1
@@ -2535,8 +2526,8 @@ packages:
       std-env: 3.7.0
       tinybench: 2.8.0
       tinypool: 1.0.0
-      vite: 5.2.11(@types/node@20.12.12)(less@4.2.0)
-      vite-node: 2.0.1(@types/node@20.12.12)(less@4.2.0)
+      vite: 5.2.11(@types/node@22.8.2)(less@4.2.0)
+      vite-node: 2.0.1(@types/node@22.8.2)(less@4.2.0)
       why-is-node-running: 2.2.2
     transitivePeerDependencies:
       - less
