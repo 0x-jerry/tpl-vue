@@ -4,9 +4,7 @@ import Vue from '@vitejs/plugin-vue'
 import path from 'path'
 import VueRouter from 'unplugin-vue-router/vite'
 import Components from 'unplugin-vue-components/vite'
-import AutoImport from 'unplugin-auto-import/vite'
 import Unocss from 'unocss/vite'
-import { VueRouterAutoImports } from 'unplugin-vue-router'
 
 // https://vitejs.dev/config/
 export default defineConfig(({}) => {
@@ -31,12 +29,6 @@ export default defineConfig(({}) => {
       Components({
         dts: 'types/components.d.ts',
         types: [],
-      }),
-
-      // https://github.com/antfu/unplugin-auto-import
-      AutoImport({
-        dts: 'types/auto-imports.d.ts',
-        imports: ['vue', '@vueuse/core', VueRouterAutoImports],
       }),
 
       // https://github.com/unocss/unocss
