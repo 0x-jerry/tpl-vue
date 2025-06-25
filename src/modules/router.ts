@@ -1,6 +1,6 @@
+import type { Plugin } from 'vue'
 import { createRouter, createWebHashHistory } from 'vue-router/auto'
 import { routes } from 'vue-router/auto-routes'
-import { Plugin } from 'vue'
 
 export const install: Plugin = (app) => {
   const router = createRouter({
